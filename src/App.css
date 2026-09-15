@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fc;
+  color: #202124;
+}
+
+/* Navigation */
+
+.navbar {
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 28px;
+  color: #0057ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #202124;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0057ff;
+}
+
+/* Hero Section */
+
+.hero-section {
+  min-height: 80vh;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #e7efff);
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.welcome {
+  color: #0057ff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+.hero-content h1 span {
+  color: #0057ff;
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222222;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+  color: #444444;
+  font-size: 18px;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn,
+.counter-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #0057ff;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background: #003fc2;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 2px solid #0057ff;
+  color: #0057ff;
+  background: #ffffff;
+}
+
+.secondary-btn:hover {
+  background: #0057ff;
+  color: #ffffff;
+}
+
+/* General Sections */
+
+.section {
+  padding: 80px 8%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #111111;
+}
+
+.section > p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  color: #444444;
+}
+
+/* Skills */
+
+.skills-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #0057ff;
+}
+
+.skill-card h3 {
+  color: #0057ff;
+  margin-bottom: 12px;
+}
+
+.skill-card p {
+  color: #444444;
+  line-height: 1.5;
+}
+
+/* Counter */
+
+.counter-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: #dfeaff;
+}
+
+.counter-section h2 {
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.counter-section p {
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.counter-section strong {
+  color: #0057ff;
+  font-size: 20px;
+}
+
+.counter-btn {
+  border: none;
+  background: #0057ff;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.counter-btn:hover {
+  background: #003fc2;
+  transform: scale(1.05);
+}
+
+/* Contact */
+
+.contact {
+  padding-bottom: 100px;
+}
+
+.contact p {
+  margin-bottom: 25px;
+  color: #444444;
+}
+
+/* Footer */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #202124;
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content h2 {
+    font-size: 23px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 60px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+}
